@@ -3,6 +3,7 @@ package org.autotest.operators.constants;
 import org.autotest.operators.MutationOperator;
 import spoon.reflect.code.CtLiteral;
 import spoon.reflect.code.CtUnaryOperator;
+import spoon.reflect.code.UnaryOperatorKind;
 import spoon.reflect.declaration.CtElement;
 
 import java.util.Arrays;
@@ -17,9 +18,14 @@ public class OneConstantMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
         if (candidate instanceof CtUnaryOperator) {
-            // Manejamos el "-1"
+            // Manejamos el "-x" o "+x"
+
             CtUnaryOperator op = (CtUnaryOperator)candidate;
-            return op.toString().equals("-1");
+            if (op.getKind() == UnaryOperatorKind.NEG)
+                return true;
+
+            if (op.getKind() == UnaryOperatorKind.POS)
+                return !op.toString().equals("+1");
         }
 
         if (!(candidate instanceof CtLiteral))
@@ -34,8 +40,8 @@ public class OneConstantMutator extends MutationOperator {
         if (!targetTypes.contains(type))
             return false;
 
-        // No hay que reemplazar el "1" de "-1"
-        if (op.getParent().toString().contains("-1"))
+        // No hay que reemplazar el "1" de "-1" o "+1"
+        if (op.getParent().toString().contains("-1") || op.getParent().toString().contains("+1"))
             return false;
 
         return !op.toString().equals("1");
@@ -43,14 +49,18 @@ public class OneConstantMutator extends MutationOperator {
 
     @Override
     public void process(CtElement candidate) {
-        CtLiteral newValue = candidate.getFactory().Code().createLiteral(1);
+        // TODO: La siguiente línea causa error pero suena a que sería lo correcto
+        // candidate.replace(candidate.getFactory().Code().createLiteral(1))
+
         if (candidate instanceof CtUnaryOperator) {
-            // Es "-1"
             CtUnaryOperator op = (CtUnaryOperator)candidate;
-            op.setOperand(newValue);
+
+            // Lo transformamos en +1, valga lo que valga
+            op.setKind(UnaryOperatorKind.POS);
+            op.setOperand(op.getFactory().Code().createLiteral(1));
         } else {
             CtLiteral op = (CtLiteral)candidate;
-            op.setValue(newValue);
+            op.setValue(op.getFactory().Code().createLiteral(1));
         }
     }
 
@@ -61,7 +71,7 @@ public class OneConstantMutator extends MutationOperator {
     @Override
     public String describeMutation(CtElement candidate) {
         return this.getClass().getSimpleName() + ": Se reemplazó " +
-                candidate.toString() + " por 1" +
+                candidate.toString() + " por +1" +
                 " en la línea " + candidate.getPosition().getLine() + ".";
     }
 }

@@ -2,6 +2,8 @@ package org.autotest.operators.constants;
 
 import org.autotest.operators.MutationOperator;
 import spoon.reflect.code.CtLiteral;
+import spoon.reflect.code.CtUnaryOperator;
+import spoon.reflect.code.UnaryOperatorKind;
 import spoon.reflect.declaration.CtElement;
 
 import java.util.Arrays;
@@ -25,6 +27,10 @@ public class ZeroConstantMutator extends MutationOperator {
         );
 
         if (!targetTypes.contains(type))
+            return false;
+
+        // No hay que reemplazar el "0" de "-0" ni "+0"
+        if (op.getParent().toString().contains("-0") || op.getParent().toString().contains("+0"))
             return false;
 
         return !op.toString().equals("0");

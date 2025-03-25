@@ -1,77 +1,77 @@
 Se generaron 76 mutantes:
-	StackArMutated1218 - EmptyReturnsMutator: Se reemplazó readIndex + 1 por 0 en la línea 25.
-	StackArMutated7773 - EmptyReturnsMutator: Se reemplazó result por 0 en la línea 67.
-	StackArMutated2193 - EmptyReturnsMutator: Se reemplazó b.toString() por "" en la línea 99.
-	StackArMutated7466 - FalseReturnsMutator: Se reemplazó size() == 0 por false en la línea 29.
-	StackArMutated571 - FalseReturnsMutator: Se reemplazó size() == elems.length por false en la línea 33.
-	StackArMutated8751 - FalseReturnsMutator: Se reemplazó true por false en la línea 73.
-	StackArMutated1535 - FalseReturnsMutator: Se reemplazó true por false en la línea 83.
-	StackArMutated2065 - MinusOneConstantMutator: Se reemplazó 10 por -1 en la línea 7.
-	StackArMutated956 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 18.
-	StackArMutated34 - MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 25.
-	StackArMutated5587 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 29.
-	StackArMutated3489 - MinusOneConstantMutator: Se reemplazó 31 por -1 en la línea 63.
-	StackArMutated1671 - MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 64.
-	StackArMutated9421 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 90.
-	StackArMutated1756 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 91.
-	StackArMutated7803 - ZeroConstantMutator: Se reemplazó 10 por 0 en la línea 7.
-	StackArMutated4985 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 11.
-	StackArMutated8759 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 25.
-	StackArMutated5734 - ZeroConstantMutator: Se reemplazó 31 por 0 en la línea 63.
-	StackArMutated1106 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.
-	StackArMutated3452 - TrueReturnsMutator: Se reemplazó size() == 0 por true en la línea 29.
-	StackArMutated4193 - TrueReturnsMutator: Se reemplazó size() == elems.length por true en la línea 33.
-	StackArMutated8244 - TrueReturnsMutator: Se reemplazó false por true en la línea 75.
-	StackArMutated266 - TrueReturnsMutator: Se reemplazó false por true en la línea 77.
-	StackArMutated307 - TrueReturnsMutator: Se reemplazó false por true en la línea 80.
-	StackArMutated4688 - TrueReturnsMutator: Se reemplazó false por true en la línea 82.
-	StackArMutated4502 - MathMutator: Se reemplazó + por - en la línea 25.
-	StackArMutated9303 - MathMutator: Se reemplazó + por - en la línea 65.
-	StackArMutated6638 - MathMutator: Se reemplazó * por / en la línea 65.
-	StackArMutated3476 - MathMutator: Se reemplazó + por - en la línea 66.
-	StackArMutated687 - MathMutator: Se reemplazó * por / en la línea 66.
-	StackArMutated7761 - IncrementsMutator: Se reemplazó ++ por -- en la línea 40.
-	StackArMutated2436 - IncrementsMutator: Se reemplazó -- por ++ en la línea 49.
-	StackArMutated4824 - IncrementsMutator: Se reemplazó ++ por -- en la línea 90.
-	StackArMutated4077 - OneConstantMutator: Se reemplazó 10 por 1 en la línea 7.
-	StackArMutated3534 - OneConstantMutator: Se reemplazó -1 por 1 en la línea 11.
-	StackArMutated446 - OneConstantMutator: Se reemplazó 0 por 1 en la línea 18.
-	StackArMutated1975 - OneConstantMutator: Se reemplazó 0 por 1 en la línea 29.
-	StackArMutated2524 - OneConstantMutator: Se reemplazó 31 por 1 en la línea 63.
-	StackArMutated2332 - OneConstantMutator: Se reemplazó 0 por 1 en la línea 90.
-	StackArMutated5923 - OneConstantMutator: Se reemplazó 0 por 1 en la línea 91.
-	StackArMutated5227 - TrueConditionalsMutator: Se reemplazó capacity < 0 por true en la línea 18.
-	StackArMutated4343 - TrueConditionalsMutator: Se reemplazó isFull() por true en la línea 37.
-	StackArMutated2691 - TrueConditionalsMutator: Se reemplazó isEmpty() por true en la línea 45.
-	StackArMutated7204 - TrueConditionalsMutator: Se reemplazó isEmpty() por true en la línea 54.
-	StackArMutated2338 - TrueConditionalsMutator: Se reemplazó this == obj por true en la línea 72.
-	StackArMutated7926 - TrueConditionalsMutator: Se reemplazó obj == null por true en la línea 74.
-	StackArMutated2040 - TrueConditionalsMutator: Se reemplazó getClass() != obj.getClass() por true en la línea 76.
-	StackArMutated7602 - TrueConditionalsMutator: Se reemplazó !java.util.Arrays.equals(elems, other.elems) por true en la línea 79.
-	StackArMutated1008 - TrueConditionalsMutator: Se reemplazó readIndex != other.readIndex por true en la línea 81.
-	StackArMutated6115 - TrueConditionalsMutator: Se reemplazó i > 0 por true en la línea 91.
-	StackArMutated1596 - FalseConditionalsMutator: Se reemplazó capacity < 0 por false en la línea 18.
-	StackArMutated9745 - FalseConditionalsMutator: Se reemplazó isFull() por false en la línea 37.
-	StackArMutated686 - FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.
-	StackArMutated2421 - FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 54.
-	StackArMutated5979 - FalseConditionalsMutator: Se reemplazó this == obj por false en la línea 72.
-	StackArMutated6326 - FalseConditionalsMutator: Se reemplazó obj == null por false en la línea 74.
-	StackArMutated5290 - FalseConditionalsMutator: Se reemplazó getClass() != obj.getClass() por false en la línea 76.
-	StackArMutated8943 - FalseConditionalsMutator: Se reemplazó !java.util.Arrays.equals(elems, other.elems) por false en la línea 79.
-	StackArMutated2653 - FalseConditionalsMutator: Se reemplazó readIndex != other.readIndex por false en la línea 81.
-	StackArMutated2262 - FalseConditionalsMutator: Se reemplazó i > 0 por false en la línea 91.
-	StackArMutated5621 - NullReturnsMutator: Se reemplazó rv por null en la línea 50.
-	StackArMutated9016 - NullReturnsMutator: Se reemplazó rv por null en la línea 58.
-	StackArMutated3898 - NullReturnsMutator: Se reemplazó b.toString() por null en la línea 99.
-	StackArMutated8597 - ConditionalsBoundaryMutator: Se reemplazó < por <= en la línea 18.
-	StackArMutated9066 - ConditionalsBoundaryMutator: Se reemplazó <= por < en la línea 90.
-	StackArMutated2659 - ConditionalsBoundaryMutator: Se reemplazó > por >= en la línea 91.
-	StackArMutated8097 - NegateConditionsMutator: Se reemplazó < por >= en la línea 18.
-	StackArMutated3057 - NegateConditionsMutator: Se reemplazó == por != en la línea 29.
-	StackArMutated8966 - NegateConditionsMutator: Se reemplazó == por != en la línea 33.
-	StackArMutated4172 - NegateConditionsMutator: Se reemplazó == por != en la línea 72.
-	StackArMutated4363 - NegateConditionsMutator: Se reemplazó == por != en la línea 74.
-	StackArMutated5904 - NegateConditionsMutator: Se reemplazó != por == en la línea 76.
-	StackArMutated921 - NegateConditionsMutator: Se reemplazó != por == en la línea 81.
-	StackArMutated2176 - NegateConditionsMutator: Se reemplazó <= por > en la línea 90.
-	StackArMutated8919 - NegateConditionsMutator: Se reemplazó > por <= en la línea 91.
+	StackArMutated84 - EmptyReturnsMutator: Se reemplazó readIndex + 1 por 0 en la línea 25.
+	StackArMutated5442 - EmptyReturnsMutator: Se reemplazó result por 0 en la línea 67.
+	StackArMutated9936 - EmptyReturnsMutator: Se reemplazó b.toString() por "" en la línea 99.
+	StackArMutated2444 - FalseReturnsMutator: Se reemplazó size() == 0 por false en la línea 29.
+	StackArMutated1688 - FalseReturnsMutator: Se reemplazó size() == elems.length por false en la línea 33.
+	StackArMutated7974 - FalseReturnsMutator: Se reemplazó true por false en la línea 73.
+	StackArMutated9292 - FalseReturnsMutator: Se reemplazó true por false en la línea 83.
+	StackArMutated8346 - MinusOneConstantMutator: Se reemplazó 10 por -1 en la línea 7.
+	StackArMutated6474 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 18.
+	StackArMutated5350 - MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 25.
+	StackArMutated1665 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 29.
+	StackArMutated9117 - MinusOneConstantMutator: Se reemplazó 31 por -1 en la línea 63.
+	StackArMutated6447 - MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 64.
+	StackArMutated9514 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 90.
+	StackArMutated9409 - MinusOneConstantMutator: Se reemplazó 0 por -1 en la línea 91.
+	StackArMutated144 - ZeroConstantMutator: Se reemplazó 10 por 0 en la línea 7.
+	StackArMutated6240 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 11.
+	StackArMutated4896 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 25.
+	StackArMutated7518 - ZeroConstantMutator: Se reemplazó 31 por 0 en la línea 63.
+	StackArMutated5575 - ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.
+	StackArMutated5868 - TrueReturnsMutator: Se reemplazó size() == 0 por true en la línea 29.
+	StackArMutated6629 - TrueReturnsMutator: Se reemplazó size() == elems.length por true en la línea 33.
+	StackArMutated212 - TrueReturnsMutator: Se reemplazó false por true en la línea 75.
+	StackArMutated3872 - TrueReturnsMutator: Se reemplazó false por true en la línea 77.
+	StackArMutated1113 - TrueReturnsMutator: Se reemplazó false por true en la línea 80.
+	StackArMutated1577 - TrueReturnsMutator: Se reemplazó false por true en la línea 82.
+	StackArMutated244 - MathMutator: Se reemplazó + por - en la línea 25.
+	StackArMutated7412 - MathMutator: Se reemplazó + por - en la línea 65.
+	StackArMutated7729 - MathMutator: Se reemplazó * por / en la línea 65.
+	StackArMutated9000 - MathMutator: Se reemplazó + por - en la línea 66.
+	StackArMutated3567 - MathMutator: Se reemplazó * por / en la línea 66.
+	StackArMutated7932 - IncrementsMutator: Se reemplazó ++ por -- en la línea 40.
+	StackArMutated6969 - IncrementsMutator: Se reemplazó -- por ++ en la línea 49.
+	StackArMutated2485 - IncrementsMutator: Se reemplazó ++ por -- en la línea 90.
+	StackArMutated3644 - OneConstantMutator: Se reemplazó 10 por +1 en la línea 7.
+	StackArMutated5433 - OneConstantMutator: Se reemplazó -1 por +1 en la línea 11.
+	StackArMutated6452 - OneConstantMutator: Se reemplazó 0 por +1 en la línea 18.
+	StackArMutated7388 - OneConstantMutator: Se reemplazó 0 por +1 en la línea 29.
+	StackArMutated8684 - OneConstantMutator: Se reemplazó 31 por +1 en la línea 63.
+	StackArMutated791 - OneConstantMutator: Se reemplazó 0 por +1 en la línea 90.
+	StackArMutated4818 - OneConstantMutator: Se reemplazó 0 por +1 en la línea 91.
+	StackArMutated9952 - TrueConditionalsMutator: Se reemplazó capacity < 0 por true en la línea 18.
+	StackArMutated7035 - TrueConditionalsMutator: Se reemplazó isFull() por true en la línea 37.
+	StackArMutated6545 - TrueConditionalsMutator: Se reemplazó isEmpty() por true en la línea 45.
+	StackArMutated5322 - TrueConditionalsMutator: Se reemplazó isEmpty() por true en la línea 54.
+	StackArMutated2640 - TrueConditionalsMutator: Se reemplazó this == obj por true en la línea 72.
+	StackArMutated1408 - TrueConditionalsMutator: Se reemplazó obj == null por true en la línea 74.
+	StackArMutated6577 - TrueConditionalsMutator: Se reemplazó getClass() != obj.getClass() por true en la línea 76.
+	StackArMutated8354 - TrueConditionalsMutator: Se reemplazó !java.util.Arrays.equals(elems, other.elems) por true en la línea 79.
+	StackArMutated6254 - TrueConditionalsMutator: Se reemplazó readIndex != other.readIndex por true en la línea 81.
+	StackArMutated913 - TrueConditionalsMutator: Se reemplazó i > 0 por true en la línea 91.
+	StackArMutated2863 - FalseConditionalsMutator: Se reemplazó capacity < 0 por false en la línea 18.
+	StackArMutated2182 - FalseConditionalsMutator: Se reemplazó isFull() por false en la línea 37.
+	StackArMutated776 - FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.
+	StackArMutated8953 - FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 54.
+	StackArMutated1518 - FalseConditionalsMutator: Se reemplazó this == obj por false en la línea 72.
+	StackArMutated8642 - FalseConditionalsMutator: Se reemplazó obj == null por false en la línea 74.
+	StackArMutated3557 - FalseConditionalsMutator: Se reemplazó getClass() != obj.getClass() por false en la línea 76.
+	StackArMutated3575 - FalseConditionalsMutator: Se reemplazó !java.util.Arrays.equals(elems, other.elems) por false en la línea 79.
+	StackArMutated341 - FalseConditionalsMutator: Se reemplazó readIndex != other.readIndex por false en la línea 81.
+	StackArMutated53 - FalseConditionalsMutator: Se reemplazó i > 0 por false en la línea 91.
+	StackArMutated2995 - NullReturnsMutator: Se reemplazó rv por null en la línea 50.
+	StackArMutated7138 - NullReturnsMutator: Se reemplazó rv por null en la línea 58.
+	StackArMutated1636 - NullReturnsMutator: Se reemplazó b.toString() por null en la línea 99.
+	StackArMutated2166 - ConditionalsBoundaryMutator: Se reemplazó < por <= en la línea 18.
+	StackArMutated2531 - ConditionalsBoundaryMutator: Se reemplazó <= por < en la línea 90.
+	StackArMutated5790 - ConditionalsBoundaryMutator: Se reemplazó > por >= en la línea 91.
+	StackArMutated7374 - NegateConditionsMutator: Se reemplazó < por >= en la línea 18.
+	StackArMutated3535 - NegateConditionsMutator: Se reemplazó == por != en la línea 29.
+	StackArMutated9129 - NegateConditionsMutator: Se reemplazó == por != en la línea 33.
+	StackArMutated6563 - NegateConditionsMutator: Se reemplazó == por != en la línea 72.
+	StackArMutated3004 - NegateConditionsMutator: Se reemplazó == por != en la línea 74.
+	StackArMutated6822 - NegateConditionsMutator: Se reemplazó != por == en la línea 76.
+	StackArMutated3688 - NegateConditionsMutator: Se reemplazó != por == en la línea 81.
+	StackArMutated171 - NegateConditionsMutator: Se reemplazó <= por > en la línea 90.
+	StackArMutated6824 - NegateConditionsMutator: Se reemplazó > por <= en la línea 91.
