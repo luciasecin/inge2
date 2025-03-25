@@ -62,15 +62,21 @@ public class StackTests3 extends MutationAnalysisRunner {
     }
 
     // Tests nuestros
+    public void testConstructorWithNoCapacity() {
+        assertDoesNotThrow(() -> {
+            Stack stack = createStack(0);
+        });
+    }
+
     public void testSizeDecreasesByOne() throws Exception {
         Stack stack = createStack();
         assertEquals(0, stack.size());
         stack.push(42);
-//        stack.push(43);
-//        stack.push(44);
-        assertEquals(1, stack.size());
+        stack.push(43);
+        stack.push(44);
+        assertEquals(3, stack.size());
         stack.pop();
-        assertEquals(0, stack.size());
+        assertEquals(2, stack.size());
     }
 
     public void testPushOnFull() throws Exception {
@@ -103,12 +109,30 @@ public class StackTests3 extends MutationAnalysisRunner {
         assertEquals(43, stack.top());
     }
 
+    int calcHashCode(Object[] arr, int elems) {
+        return 31 * (31 + Arrays.hashCode(arr)) + elems-1;
+    }
+
     public void testHashCodeOnEmpty() throws Exception {
         Stack stack = createStack(10);
+        assertEquals(calcHashCode(new Object[10], 0), stack.hashCode());
+    }
 
-        assertNotEquals(0, stack.hashCode());
-        assertNotEquals(1, stack.hashCode());
-        assertNotEquals(-1, stack.hashCode());
+    public void testHashCodeWithItems() throws Exception {
+        Stack stack = createStack(10);
+        stack.push(42);
+        stack.push(43);
+
+        Object[] elems = new Object[10];
+        elems[0] = 42;
+        elems[1] = 43;
+
+        assertEquals(calcHashCode(elems, 2), stack.hashCode());
+    }
+
+    public void testEqualsSelf() throws Exception {
+        Stack stack = createStack();
+        assertEquals(stack, stack);
     }
 
     public void testEqualsNull() throws Exception {
