@@ -55,7 +55,7 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
      - StackArMutated5195 (OneConstantMutator: Se reemplazó 1 por 1 en la línea 11.), 
 
 4. ¿Cuál es el instruction coverage promedio que lograron para las clases mutadas?
-   - Respuesta:
+   - Respuesta: 70%
 
 5. ¿Cuál es el peor instruction coverage que lograron para una clase mutada? ¿Por qué creen que sucede esto?
-   - Respuesta:
+   - Respuesta: 5%, el mutante es StackArMutated8097 (NegateConditionsMutator: Se reemplazó < por >= en la línea 18.), esta mutación causa que fallen todas las instanciaciones, por lo que no se llega a testear el resto del código.
