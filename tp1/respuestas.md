@@ -8,10 +8,10 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 ## Ejercicio 1: Resultados de generación de mutantes
 
 1. ¿Cuántos mutantes se generaron en total?
-   - Respuesta: 82
+   - Respuesta: 76
 
 2. ¿Qué operador de mutación generó más mutantes? ¿Cuántos y por qué?
-   - Respuesta: TrueConditionalsMutator y FalseConditionalsMutator ambos generaron 10 cada uno, porque el codigo provisto tiene muchos condicionales.
+   - Respuesta: TrueConditionalsMutator y FalseConditionalsMutator ambos generaron 10 cada uno, porque el código provisto tiene muchos condicionales.
 
 3. ¿Qué operador de mutación generó menos mutantes? ¿Cuántos y por qué?
    - Respuesta: ConditionalsBoundaryMutator, NullReturnsMutator, IncrementsMutator, y EmptyReturnsMutator todos generaron 3 porque:
@@ -24,29 +24,35 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 
 1. ¿Cuántos mutantes vivos y muertos encontraron cada uno de los test suites?
    - **StackTests1**:
-     - Mutantes vivos: 63
-     - Mutantes muertos: 18
+     - Mutantes vivos: 57
+     - Mutantes muertos: 19
    - **StackTests2**:
-     - Mutantes vivos: 45
-     - Mutantes muertos: 36
+     - Mutantes vivos: 39
+     - Mutantes muertos: 37
 
 2. ¿Cuál es el mutation score de cada test suite?
-   - **StackTests1**: 22%
-   - **StackTests2**: 44%
+   - **StackTests1**: 25%
+   - **StackTests2**: 48%
 
 ---
 
 ## Ejercicio 3: Mejora del test suite
 
 1. ¿Cuál es el mutation score logrado para los tests de StackTests3?
-   - Respuesta:
+   - Respuesta: 92%
 
 2. ¿Cuántos mutantes vivos y muertos encontraron?
-   - Mutantes vivos:
-   - Mutantes muertos:
+   - Mutantes vivos: 6
+   - Mutantes muertos: 70
 
 3. Comente cuáles son todos los mutantes vivos que quedaron y por qué son equivalentes al programa original (si no lo fueran, todavía es posible mejorar el mutation score).
-   - Respuesta:
+   - Respuesta: Los mutantes vivos son los siguientes:
+     - StackArMutated5176 (FalseConditionalsMutator: Se reemplazó this == obj por false en la línea 72.), que es equivalente porque es redundante con las siguientes condiciones del método.
+     - StackArMutated5696 (TrueReturnsMutator: Se reemplazó false por true en la línea 82.), si se llega a esta linea, la condición del if (línea 81) ya es necesariamente falsa, porque al tener los mismos elementos tienen el mismo índice. Por lo que nunca se llega a ejecutar esta línea.
+     - StackArMutated4094 (FalseConditionalsMutator: Se reemplazó readIndex != other.readIndex por false en la línea 81.), similar al anterior, esta condición es redundante.  
+     - StackArMutated416 (MathMutator: Se reemplazó * por / en la línea 65.), x*1 == x/1 
+     - StackArMutated5359 (FalseConditionalsMutator: Se reemplazó isEmpty() por false en la línea 45.), en la línea 48 se llama a `.top()`, ese método hace el mismo chequeo y tira la misma excepción. Es redundante este if.
+     - StackArMutated5195 (OneConstantMutator: Se reemplazó 1 por 1 en la línea 11.), 
 
 4. ¿Cuál es el instruction coverage promedio que lograron para las clases mutadas?
    - Respuesta:

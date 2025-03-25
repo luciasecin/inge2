@@ -2,6 +2,7 @@ package org.autotest.operators.constants;
 
 import org.autotest.operators.MutationOperator;
 import spoon.reflect.code.CtLiteral;
+import spoon.reflect.code.CtUnaryOperator;
 import spoon.reflect.declaration.CtElement;
 
 import java.util.Arrays;
@@ -15,6 +16,12 @@ import java.util.List;
 public class OneConstantMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
+        if (candidate instanceof CtUnaryOperator) {
+            // Manejamos el "-1"
+            CtUnaryOperator op = (CtUnaryOperator)candidate;
+            return op.toString().equals("-1");
+        }
+
         if (!(candidate instanceof CtLiteral))
             return false;
 
@@ -27,13 +34,24 @@ public class OneConstantMutator extends MutationOperator {
         if (!targetTypes.contains(type))
             return false;
 
+        // No hay que reemplazar el "1" de "-1"
+        if (op.getParent().toString().contains("-1"))
+            return false;
+
         return !op.toString().equals("1");
     }
 
     @Override
     public void process(CtElement candidate) {
-        CtLiteral op = (CtLiteral)candidate;
-        op.setValue(op.getFactory().Code().createLiteral(1));
+        CtLiteral newValue = candidate.getFactory().Code().createLiteral(1);
+        if (candidate instanceof CtUnaryOperator) {
+            // Es "-1"
+            CtUnaryOperator op = (CtUnaryOperator)candidate;
+            op.setOperand(newValue);
+        } else {
+            CtLiteral op = (CtLiteral)candidate;
+            op.setValue(newValue);
+        }
     }
 
     private static String getLiteralType(CtLiteral op) {
@@ -42,9 +60,8 @@ public class OneConstantMutator extends MutationOperator {
 
     @Override
     public String describeMutation(CtElement candidate) {
-        CtLiteral op = (CtLiteral)candidate;
         return this.getClass().getSimpleName() + ": Se reemplazó " +
-                op.getValue().toString() + " por 1" +
-                " en la línea " + op.getPosition().getLine() + ".";
+                candidate.toString() + " por 1" +
+                " en la línea " + candidate.getPosition().getLine() + ".";
     }
 }

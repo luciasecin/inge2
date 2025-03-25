@@ -8,7 +8,6 @@ public class StackTests1 extends MutationAnalysisRunner {
         return false;
     }
 
-    /*
     public void testSizeIncreasesByOne() throws Exception {
         Stack stack = createStack();
         assertEquals(0, stack.size());
@@ -31,5 +30,4 @@ public class StackTests1 extends MutationAnalysisRunner {
             Stack stack = createStack(-1);
         });
     }
-     */
 }

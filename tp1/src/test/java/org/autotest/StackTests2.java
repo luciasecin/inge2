@@ -7,7 +7,7 @@ public class StackTests2 extends MutationAnalysisRunner {
     protected boolean useVerboseMode() {
         return false;
     }
-/*
+
     public void testSizeIncreasesByOne() throws Exception {
         Stack stack = createStack();
         assertEquals(0, stack.size());
@@ -56,5 +56,4 @@ public class StackTests2 extends MutationAnalysisRunner {
         stack.push(43);
         assertEquals("[42,43]", stack.toString());
     }
-    */
 }
